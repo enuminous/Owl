@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OWL Alert Record",
+  "type": "object",
+  "required": [
+    "machine_version",
+    "timestamp",
+    "system_id",
+    "warning_score",
+    "alert_threshold",
+    "alert"
+  ],
+  "properties": {
+    "machine_version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "system_id": {
+      "type": "string"
+    },
+    "warning_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "alert_threshold": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "alert": {
+      "type": "boolean"
+    },
+    "warning_horizon": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "failure_definition": {
+      "type": "string"
+    }
+  }
+}
